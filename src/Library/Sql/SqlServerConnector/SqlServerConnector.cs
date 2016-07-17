@@ -196,7 +196,7 @@ namespace LunarSoft.Library.Sql
                 {
                     continue;
                 }
-                type.GetField(reader.GetName(i))?.SetValue(instance, reader.GetString(i));
+                type.GetField(reader.GetName(i))?.SetValue(instance, reader.GetValue(i).ToString());
             }
             return instance;
         }
